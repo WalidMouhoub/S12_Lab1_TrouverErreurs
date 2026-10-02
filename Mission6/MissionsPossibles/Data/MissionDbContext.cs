@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Mission.Models;
+using Mission.ViewModels;
 
 
 namespace Mission.Data

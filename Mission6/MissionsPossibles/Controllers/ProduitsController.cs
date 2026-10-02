@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Mission.Data;
 using Mission.ViewModels;
 using Mission.Models;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Mission.Controllers
 {
@@ -50,11 +51,15 @@ namespace Mission.Controllers
         public IActionResult Create()
         {
             Produit_VM produit_VM = new Produit_VM();
+
             produit_VM.CategorieList = _context.Categories.OrderBy(c => c.Titre).Select(i => new SelectListItem
             {
                 Text = i.Titre,
                 Value = i.Id.ToString()
+
+
             });
+
             return View(produit_VM);
         }
 
