@@ -19,7 +19,7 @@ namespace Mission.Models
         [ForeignKey("Categorie")]
         public int CategorieId { get; set; }
       
-     
+        [ValidateNever]
         public Categorie Categorie { get; set; }
 
 
